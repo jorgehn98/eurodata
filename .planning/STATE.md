@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 7 (Foundation)
-Plan: 0 of 4 in current phase
-Status: Ready to plan
-Last activity: 2026-02-26 — Roadmap created; all 61 v1 requirements mapped to 7 phases
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-27 — Plan 01-01 complete: Next.js 14 scaffold, Tailwind v3 color tokens, Vercel CI/CD
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 4%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: ~2 sessions
+- Total execution time: ~1 hour (human-action checkpoints included)
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1/4 | ~1h | ~1h |
 
 **Recent Trend:**
-- Last 5 plans: none yet
-- Trend: -
+- Last 5 plans: 01-01 (scaffold + CI/CD)
+- Trend: On track
 
 *Updated after each plan completion*
 
@@ -47,6 +47,9 @@ Recent decisions affecting current work:
 - [Pre-phase]: Missing data stored as NULL, never 0 — enforced at ETL ingestion layer
 - [Pre-phase]: All chart titles must be strictly neutral (describe axis, not conclusion) — political sensitivity defense
 - [Pre-phase]: Manual CSV seeds for v1 while automated ETL is built in Phase 6 — don't automate wrong data
+- [01-01]: next.config stays as .mjs (not .ts) — avoids edge case with next-intl plugin; .mjs is stable for Next.js 14
+- [01-01]: Tailwind v3 color tokens in theme.extend.colors, not CSS custom properties
+- [01-01]: Production branch is master (not main) — Vercel connected to master; all future pushes must target master
 
 ### Pending Todos
 
@@ -60,6 +63,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Roadmap written; STATE.md initialized; REQUIREMENTS.md traceability updated
+Last session: 2026-02-27
+Stopped at: Completed 01-01-PLAN.md — Next.js 14 scaffold, Tailwind tokens, Vercel CI/CD
 Resume file: None

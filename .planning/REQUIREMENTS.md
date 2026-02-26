@@ -9,14 +9,14 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Project is deployed to Vercel with automatic CI/CD on push to main
-- [ ] **INFRA-02**: Next.js 14 (App Router) with TypeScript configured with strict mode
+- [x] **INFRA-01**: Project is deployed to Vercel with automatic CI/CD on push to main
+- [x] **INFRA-02**: Next.js 14 (App Router) with TypeScript configured with strict mode
 - [ ] **INFRA-03**: Supabase project connected (browser client + server client for SSR)
 - [ ] **INFRA-04**: Bilingual routing configured via next-intl (`/es/...` and `/en/...` routes with locale detection middleware)
 - [ ] **INFRA-05**: All UI strings use translation keys (`t('key')`) — zero hardcoded Spanish or English in components
 - [ ] **INFRA-06**: Database schema created via migration files: `countries`, `economic_indicators`, `political_data`, `crime_statistics`, `migration_data` tables
 - [ ] **INFRA-07**: `countries` lookup table seeded with EU-27 country codes, names (ES + EN), and flag emoji
-- [ ] **INFRA-08**: Tailwind CSS configured with custom design tokens for the dashboard palette
+- [x] **INFRA-08**: Tailwind CSS configured with custom design tokens for the dashboard palette
 - [ ] **INFRA-09**: TanStack Query provider configured at root layout
 
 ### Economy Section
@@ -138,14 +138,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
 | INFRA-06 | Phase 1 | Pending |
 | INFRA-07 | Phase 1 | Pending |
-| INFRA-08 | Phase 1 | Pending |
+| INFRA-08 | Phase 1 | Complete |
 | INFRA-09 | Phase 1 | Pending |
 | DATA-01 | Phase 1 | Pending |
 | DATA-02 | Phase 1 | Pending |
