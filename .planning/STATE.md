@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 7 (Foundation)
-Plan: 1 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-27 — Plan 01-01 complete: Next.js 14 scaffold, Tailwind v3 color tokens, Vercel CI/CD
+Last activity: 2026-02-27 — Plan 01-03 complete: Supabase SSR dual-client setup, TanStack Query provider wired into locale layout
 
-Progress: [█░░░░░░░░░] 4%
+Progress: [███░░░░░░░] 10%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: ~2 sessions
-- Total execution time: ~1 hour (human-action checkpoints included)
+- Total plans completed: 3
+- Average duration: ~30 min
+- Total execution time: ~2 hours (human-action checkpoints included)
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1/4 | ~1h | ~1h |
+| 01-foundation | 3/4 | ~2h | ~40m |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (scaffold + CI/CD)
+- Last 5 plans: 01-01 (scaffold + CI/CD), 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query)
 - Trend: On track
 
 *Updated after each plan completion*
@@ -50,6 +50,10 @@ Recent decisions affecting current work:
 - [01-01]: next.config stays as .mjs (not .ts) — avoids edge case with next-intl plugin; .mjs is stable for Next.js 14
 - [01-01]: Tailwind v3 color tokens in theme.extend.colors, not CSS custom properties
 - [01-01]: Production branch is master (not main) — Vercel connected to master; all future pushes must target master
+- [01-03]: Use @supabase/ssr (not deprecated @supabase/auth-helpers-nextjs) — correct package for Next.js App Router SSR cookie handling
+- [01-03]: Env var name is NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY (not ANON_KEY) — matches Supabase dashboard "Publishable key" naming in newer projects
+- [01-03]: QueryClient created in useState(() => new QueryClient(...)) — never at module scope (prevents shared state between SSR requests)
+- [01-03]: QueryProvider placed inside NextIntlClientProvider in locale layout — all client components have both i18n and query context
 
 ### Pending Todos
 
@@ -64,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 01-01-PLAN.md — Next.js 14 scaffold, Tailwind tokens, Vercel CI/CD
+Stopped at: Completed 01-03-PLAN.md — Supabase SSR dual-client setup, TanStack Query provider, QueryProvider wired into locale layout
 Resume file: None

@@ -35,9 +35,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Next.js 14 App Router + TypeScript strict mode + Tailwind custom palette configured; Vercel CI/CD connected
-- [ ] 01-02-PLAN.md — next-intl v4 locale routing middleware, `[locale]` directory structure, language switcher, section navigation, translation file scaffold
-- [ ] 01-03-PLAN.md — Supabase @supabase/ssr browser + server client factories; TanStack Query provider wired into locale layout
+- [x] 01-01-PLAN.md — Next.js 14 App Router + TypeScript strict mode + Tailwind custom palette configured; Vercel CI/CD connected
+- [x] 01-02-PLAN.md — next-intl v4 locale routing middleware, `[locale]` directory structure, language switcher, section navigation, translation file scaffold
+- [x] 01-03-PLAN.md — Supabase @supabase/ssr browser + server client factories; TanStack Query provider wired into locale layout
 - [ ] 01-04-PLAN.md — Migration files for all 6 tables; `countries` table seeded with all EU-27 member states; data quality constraints enforced at DB level
 
 ### Phase 2: Economy Section
@@ -148,7 +148,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/4 | In Progress|  |
+| 1. Foundation | 3/4 | In Progress|  |
 | 2. Economy Section | 0/3 | Not started | - |
 | 3. Political Class Section | 0/3 | Not started | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
