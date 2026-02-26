@@ -32,13 +32,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Every database table (`countries`, `economic_indicators`, `political_data`, `crime_statistics`, `migration_data`, `sync_log`) exists in Supabase and was created via migration files
   4. The `countries` table contains all EU-27 entries with country codes, bilingual names, and flag emoji
   5. Any UI string added to a component must use `t('key')` — hardcoding a Spanish or English word in a component fails a code review
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 01-01: Project scaffolding — Next.js 14 App Router + TypeScript strict mode + Tailwind configured, Vercel CI/CD connected
-- [ ] 01-02: next-intl integration — locale routing middleware, `[locale]` directory structure, translation file scaffold for all sections
-- [ ] 01-03: Supabase connection — browser client + server client for SSR, TanStack Query provider at root layout
-- [ ] 01-04: Database schema — migration files for all five data tables plus `sync_log`; `countries` table seeded with EU-27
+- [ ] 01-01-PLAN.md — Next.js 14 App Router + TypeScript strict mode + Tailwind custom palette configured; Vercel CI/CD connected
+- [ ] 01-02-PLAN.md — next-intl v4 locale routing middleware, `[locale]` directory structure, language switcher, section navigation, translation file scaffold
+- [ ] 01-03-PLAN.md — Supabase @supabase/ssr browser + server client factories; TanStack Query provider wired into locale layout
+- [ ] 01-04-PLAN.md — Migration files for all 6 tables; `countries` table seeded with all EU-27 member states; data quality constraints enforced at DB level
 
 ### Phase 2: Economy Section
 **Goal**: Users can explore Spain's economic and purchasing power story through interactive historical charts, with every figure linked to its official source
