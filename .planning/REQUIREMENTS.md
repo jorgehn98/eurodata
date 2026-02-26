@@ -138,21 +138,73 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 to INFRA-09 | Phase 1 | Pending |
-| DATA-01 to DATA-05 | Phase 1 | Pending |
-| ECON-01 to ECON-08 | Phase 2 | Pending |
-| ETL-01 to ETL-05 | Phase 2 + Phase 6 | Pending |
-| POLI-01 to POLI-08 | Phase 3 | Pending |
-| MIGR-01 to MIGR-07 | Phase 4 | Pending |
-| CRIM-01 to CRIM-06 | Phase 4 | Pending |
-| COMP-01 to COMP-06 | Phase 5 | Pending |
-| UX-01 to UX-07 | Phase 1 + Phase 7 | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Pending |
+| INFRA-08 | Phase 1 | Pending |
+| INFRA-09 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Pending |
+| DATA-02 | Phase 1 | Pending |
+| DATA-03 | Phase 1 | Pending |
+| DATA-04 | Phase 1 | Pending |
+| DATA-05 | Phase 1 | Pending |
+| UX-05 | Phase 1 | Pending |
+| UX-06 | Phase 1 | Pending |
+| ECON-01 | Phase 2 | Pending |
+| ECON-02 | Phase 2 | Pending |
+| ECON-03 | Phase 2 | Pending |
+| ECON-04 | Phase 2 | Pending |
+| ECON-05 | Phase 2 | Pending |
+| ECON-06 | Phase 2 | Pending |
+| ECON-07 | Phase 2 | Pending |
+| ECON-08 | Phase 2 | Pending |
+| ETL-03 | Phase 2 | Pending |
+| UX-02 | Phase 2 | Pending |
+| UX-03 | Phase 2 | Pending |
+| UX-04 | Phase 2 | Pending |
+| POLI-01 | Phase 3 | Pending |
+| POLI-02 | Phase 3 | Pending |
+| POLI-03 | Phase 3 | Pending |
+| POLI-04 | Phase 3 | Pending |
+| POLI-05 | Phase 3 | Pending |
+| POLI-06 | Phase 3 | Pending |
+| POLI-07 | Phase 3 | Pending |
+| POLI-08 | Phase 3 | Pending |
+| MIGR-01 | Phase 4 | Pending |
+| MIGR-02 | Phase 4 | Pending |
+| MIGR-03 | Phase 4 | Pending |
+| MIGR-04 | Phase 4 | Pending |
+| MIGR-05 | Phase 4 | Pending |
+| MIGR-06 | Phase 4 | Pending |
+| MIGR-07 | Phase 4 | Pending |
+| CRIM-01 | Phase 4 | Pending |
+| CRIM-02 | Phase 4 | Pending |
+| CRIM-03 | Phase 4 | Pending |
+| CRIM-04 | Phase 4 | Pending |
+| CRIM-05 | Phase 4 | Pending |
+| CRIM-06 | Phase 4 | Pending |
+| COMP-01 | Phase 5 | Pending |
+| COMP-02 | Phase 5 | Pending |
+| COMP-03 | Phase 5 | Pending |
+| COMP-04 | Phase 5 | Pending |
+| COMP-05 | Phase 5 | Pending |
+| COMP-06 | Phase 5 | Pending |
+| ETL-01 | Phase 6 | Pending |
+| ETL-02 | Phase 6 | Pending |
+| ETL-04 | Phase 6 | Pending |
+| ETL-05 | Phase 6 | Pending |
+| UX-01 | Phase 7 | Pending |
+| UX-07 | Phase 7 | Pending |
 
 **Coverage:**
-- v1 requirements: 56 total
-- Mapped to phases: 56
-- Unmapped: 0 ✓
+- v1 requirements: 61 total
+- Mapped to phases: 61
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after initial definition*
+*Last updated: 2026-02-26 after roadmap creation — traceability expanded to individual requirement rows*
