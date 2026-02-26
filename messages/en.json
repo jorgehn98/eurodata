@@ -1,0 +1,20 @@
+{
+  "Navigation": {
+    "economy": "Economy",
+    "politics": "Political Class",
+    "immigration": "Immigration",
+    "crime": "Crime",
+    "comparator": "Comparator",
+    "home": "Home"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "es": "Español",
+    "en": "English"
+  },
+  "HomePage": {
+    "title": "EuroData",
+    "subtitle": "Official data. No editorials.",
+    "description": "Tracking citizens' quality of life and purchasing power against the political class."
+  }
+}

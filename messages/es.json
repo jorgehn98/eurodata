@@ -1,0 +1,20 @@
+{
+  "Navigation": {
+    "economy": "Economía",
+    "politics": "Clase Política",
+    "immigration": "Inmigración",
+    "crime": "Criminalidad",
+    "comparator": "Comparador",
+    "home": "Inicio"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "English"
+  },
+  "HomePage": {
+    "title": "EuroData",
+    "subtitle": "Datos oficiales. Sin editoriales.",
+    "description": "Seguimiento de la calidad de vida y poder adquisitivo de los ciudadanos frente a la clase política."
+  }
+}
