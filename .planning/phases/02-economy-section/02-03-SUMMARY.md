@@ -13,7 +13,7 @@ requires:
   - phase: 01-foundation/01-01
     provides: chart.* Tailwind color tokens in theme.extend.colors
 provides:
-  - Interactive economy dashboard at /es/economia and /en/economia
+  - Interactive economy dashboard at /es/economy and /en/economy
   - EconomyChart: reusable single-metric AreaChart with null-gap support and custom tooltip
   - CpiChart: multi-series AreaChart merging four CPI metrics onto one chart
   - EconomyChartSkeleton: animate-pulse shimmer card matching chart dimensions
@@ -37,7 +37,7 @@ key-files:
     - src/components/economy/EconomyChart.tsx
     - src/components/economy/EconomyChartSkeleton.tsx
     - src/components/economy/EconomySection.tsx
-    - src/app/[locale]/economia/page.tsx
+    - src/app/[locale]/economy/page.tsx
   modified:
     - messages/es.json
     - messages/en.json
@@ -51,6 +51,7 @@ key-decisions:
   - "CpiChart merges four EconomyDataPoint[] arrays by year into Record<string, number|null> for Recharts"
   - "EconomySection receives all labels as props from page.tsx — no useTranslations inside client component"
   - "Recharts Tooltip does not fire for null data points (GitHub #5552) — accepted for v1; gap + footer note communicates missing data"
+  - "Route folder renamed from economia to economy to match nav link hrefs defined in Phase 1"
 
 patterns-established:
   - "Chart section pattern: Server Component page.tsx calls getTranslations → passes Labels object to client section component"
@@ -67,14 +68,14 @@ completed: 2026-02-27
 
 # Phase 2 Plan 3: Economy Section UI Summary
 
-**Five interactive Recharts AreaChart cards at /es/economia and /en/economia with null-gap handling, source attribution links, "Data through [year]" currency labels, loading skeletons, and full Spanish/English i18n**
+**Five interactive Recharts AreaChart cards at /es/economy and /en/economy with null-gap handling, source attribution links, "Data through [year]" currency labels, loading skeletons, and full Spanish/English i18n**
 
 ## Performance
 
 - **Duration:** ~25 min
 - **Started:** 2026-02-27T00:00:00Z
 - **Completed:** 2026-02-27
-- **Tasks:** 2/2 automated tasks complete (Task 3 is human verification checkpoint)
+- **Tasks:** 3/3 complete (2 auto + 1 human-verify checkpoint — approved)
 - **Files modified:** 8
 
 ## Accomplishments
@@ -91,13 +92,15 @@ Each task was committed atomically:
 
 1. **Task 1: Install recharts and build chart components** - `54c4754` (feat)
 2. **Task 2: Build EconomySection, page route, and translations** - `141f804` (feat)
+3. **Fix: Rename route folder economia → economy** - `5d35da1` (fix)
+4. **Task 3: Human browser verification** - approved (visual checkpoint — no code commit)
 
 ## Files Created/Modified
 
 - `src/components/economy/EconomyChart.tsx` - Reusable AreaChart (EconomyChart + CpiChart exports), null-gap support, custom tooltip
 - `src/components/economy/EconomyChartSkeleton.tsx` - animate-pulse shimmer skeleton matching 320px chart card height
 - `src/components/economy/EconomySection.tsx` - Client component composing 5 chart cards, loading/empty state handling
-- `src/app/[locale]/economia/page.tsx` - Server Component page; getTranslations('Economy') props passed to EconomySection
+- `src/app/[locale]/economy/page.tsx` - Server Component page; getTranslations('Economy') props passed to EconomySection
 - `messages/es.json` - Added Economy namespace (title, intro, chart titles, CPI labels, gapsNote, dataThrough)
 - `messages/en.json` - Added Economy namespace (English equivalents)
 - `package.json` - Added recharts@^3.7.0 dependency
@@ -113,11 +116,24 @@ Each task was committed atomically:
 
 ## Deviations from Plan
 
-None - plan executed exactly as written.
+### Auto-fixed Issues
+
+**1. [Rule 3 - Blocking] Renamed route folder from `economia` to `economy`**
+- **Found during:** Post-Task 2 verification (build passed but nav links 404'd)
+- **Issue:** Plan specified `src/app/[locale]/economia/page.tsx` but Navigation component links pointed to `/economy`. Mismatch caused 404s when navigating via the nav bar.
+- **Fix:** Renamed the route folder `[locale]/economia` → `[locale]/economy`
+- **Files modified:** `src/app/[locale]/economy/page.tsx` (moved from `economia/`)
+- **Verification:** Both `/es/economy` and `/en/economy` load correctly; nav links work
+- **Committed in:** `5d35da1` (dedicated fix commit)
+
+---
+
+**Total deviations:** 1 auto-fixed (Rule 3 — blocking route mismatch)
+**Impact on plan:** Required fix to make the page reachable from navigation. No scope creep.
 
 ## Issues Encountered
 
-None.
+- Recharts Tooltip does not fire for null data points (GitHub issue #5552 — known limitation). Accepted for v1 as the visual line gap and footer note communicate missing data adequately.
 
 ## User Setup Required
 
@@ -125,9 +141,10 @@ None — no external service configuration required beyond what was already set 
 
 ## Next Phase Readiness
 
-- Economy dashboard UI is complete. Awaiting human verification (Task 3 checkpoint).
-- After verification approval, Phase 2 is complete and Phase 3 (Politics Section) is unblocked.
-- The same chart section pattern (Server Component page + client section component receiving labels as props) should be reused for Phase 3 and beyond.
+- Economy dashboard UI is complete and human-verified. Phase 2 is fully complete (plans 02-01, 02-02, 02-03 all done).
+- Phase 3 (Politics Section) is unblocked.
+- The chart section pattern (Server Component page.tsx + client section component receiving Labels props) should be reused for Phase 3 (political class), Phase 4 (immigration), and Phase 5 (crime).
+- `ChartCard` and `EconomyChartSkeleton` patterns are directly reusable for future section components.
 
 ---
 *Phase: 02-economy-section*
@@ -138,9 +155,11 @@ None — no external service configuration required beyond what was already set 
 - FOUND: src/components/economy/EconomyChart.tsx
 - FOUND: src/components/economy/EconomyChartSkeleton.tsx
 - FOUND: src/components/economy/EconomySection.tsx
-- FOUND: src/app/[locale]/economia/page.tsx
+- FOUND: src/app/[locale]/economy/page.tsx (renamed from economia)
 - FOUND: messages/es.json
 - FOUND: messages/en.json
 - FOUND: .planning/phases/02-economy-section/02-03-SUMMARY.md
 - FOUND commit: 54c4754 (Task 1)
 - FOUND commit: 141f804 (Task 2)
+- FOUND commit: 5d35da1 (Fix: route rename)
+- Human-verify checkpoint: approved

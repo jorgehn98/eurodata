@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T12:50:04.716Z"
+last_updated: "2026-02-27T14:30:00.000Z"
 progress:
   total_phases: 2
   completed_phases: 2
@@ -18,14 +18,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Citizens can verify, with official sources linked, how their purchasing power and quality of life have evolved over time compared to the political class that governs them.
-**Current focus:** Phase 2 — Economy Section
+**Current focus:** Phase 3 — Political Class Section (next up)
 
 ## Current Position
 
-Phase: 2 of 7 (Economy Section)
-Plan: 3 of 3 in current phase
-Status: Checkpoint — awaiting human verification at /es/economia
-Last activity: 2026-02-27 — Plan 02-03 Tasks 1+2 complete: recharts AreaChart components, EconomySection, /[locale]/economia route, ES/EN translations — checkpoint Task 3 requires browser verification
+Phase: 2 of 7 (Economy Section) — COMPLETE
+Plan: 3 of 3 — COMPLETE
+Status: Phase 2 complete — all three plans done and verified
+Last activity: 2026-02-27 — Plan 02-03 complete: human verification approved, route renamed economia → economy (5d35da1), all six browser checks passed at /es/economy and /en/economy
 
 Progress: [████░░░░░░] 27%
 
@@ -45,10 +45,10 @@ Progress: [████░░░░░░] 27%
 
 **Recent Trend:**
 - Last 5 plans: 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed), 02-02 (types + hook), 02-03 (chart UI + page route)
-- Trend: On track — Phase 2 automation complete; awaiting human verify at /es/economia
+- Trend: On track — Phase 2 fully complete; Phase 3 ready to begin
 
 *Updated after each plan completion*
-| Phase 02-economy-section P03 | 25 | 2 tasks | 8 files |
+| Phase 02-economy-section P03 | 70min | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -83,6 +83,7 @@ Recent decisions affecting current work:
 - [Phase 02-economy-section]: Data through [year] label derived from max(data.year) — satisfies ECON-06 without schema change
 - [Phase 02-economy-section]: EconomySection receives all labels as props from Server Component page.tsx — no useTranslations in client components
 - [Phase 02-economy-section]: CpiChart merges four EconomyDataPoint[] by year into flat Record objects for AreaChart data prop
+- [02-03]: Route folder named after English slug (economy), not Spanish (economia) — matches nav link hrefs defined in Phase 1
 
 ### Pending Todos
 
@@ -90,12 +91,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 2]: Eurostat dataset codes for each economy metric need manual research during planning (e.g., earn_ses_pub4s, ilc_li02) — cannot be assumed
 - [Phase 3]: BOE historical data structure varies by year; pre-2015 data may require manual PDF extraction — scope to be assessed during Phase 3 planning
 - [Phase 4]: Frontex data format changes annually; UNODC Excel structure varies — verify during immigration/crime planning
 
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Checkpoint Task 3 human-verify at /es/economia — 02-03 Tasks 1+2 committed (54c4754, 141f804); run `npm run dev` and verify the six checks in the checkpoint message
+Stopped at: Completed 02-03-PLAN.md — Phase 2 (Economy Section) fully complete; Phase 3 (Political Class) is next
 Resume file: None

@@ -56,7 +56,7 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — Data seed: Papa Parse CSV import scripts + seed `economic_indicators` with 10+ year history for all 8 metric strings (median_salary_real, fiscal_burden_pct, housing_salary_ratio, cpi_food/energy/transport/housing_index, poverty_risk_pct)
 - [x] 02-02-PLAN.md — API layer: EconomyDataPoint type, EconomyMetric union, SPAIN_COUNTRY_ID constant, useEconomyMetric TanStack Query hook
-- [ ] 02-03-PLAN.md — Economy UI: EconomyChart and CpiChart (Recharts AreaChart), EconomyChartSkeleton, EconomySection client component, /economia page route, Spanish + English translations
+- [x] 02-03-PLAN.md — Economy UI: EconomyChart and CpiChart (Recharts AreaChart), EconomyChartSkeleton, EconomySection client component, /economy page route, Spanish + English translations
 
 ### Phase 3: Political Class Section
 **Goal**: Users can see the factual, year-by-year comparison between political compensation and citizen purchasing power in Spain — the core differentiating feature of EuroData
