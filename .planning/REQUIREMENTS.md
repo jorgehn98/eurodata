@@ -27,8 +27,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **ECON-04**: User can view CPI broken down by category (food, energy, transport, housing) as a historical time series (Spain)
 - [x] **ECON-05**: User can view percentage of population at risk of poverty as a historical time series (Spain)
 - [x] **ECON-06**: Each economic metric displays source name, source URL, and last updated date
-- [ ] **ECON-07**: User can hover on chart data points to see exact value, year, and source
-- [ ] **ECON-08**: Economy section is available in Spanish and English
+- [x] **ECON-07**: User can hover on chart data points to see exact value, year, and source
+- [x] **ECON-08**: Economy section is available in Spanish and English
 
 ### Political Class Section
 
@@ -88,9 +88,9 @@ Requirements for initial release. Each maps to roadmap phases.
 ### UI/UX
 
 - [ ] **UX-01**: All pages render correctly on mobile (375px minimum viewport)
-- [ ] **UX-02**: All charts show loading skeleton while data fetches — no blank flash
-- [ ] **UX-03**: All charts show "No data available for [Country] / [Year]" message when data is NULL
-- [ ] **UX-04**: All source links open in new tab (`target="_blank" rel="noopener noreferrer"`)
+- [x] **UX-02**: All charts show loading skeleton while data fetches — no blank flash
+- [x] **UX-03**: All charts show "No data available for [Country] / [Year]" message when data is NULL
+- [x] **UX-04**: All source links open in new tab (`target="_blank" rel="noopener noreferrer"`)
 - [x] **UX-05**: Language switcher accessible from all pages — switches between `/es/...` and `/en/...`
 - [x] **UX-06**: Dashboard has navigation between all 5 sections (Sidebar or top nav)
 - [ ] **UX-07**: Page-level OG tags and meta descriptions for journalist link sharing
@@ -160,12 +160,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ECON-04 | Phase 2 | Complete |
 | ECON-05 | Phase 2 | Complete |
 | ECON-06 | Phase 2 | Complete |
-| ECON-07 | Phase 2 | Pending |
-| ECON-08 | Phase 2 | Pending |
+| ECON-07 | Phase 2 | Complete |
+| ECON-08 | Phase 2 | Complete |
 | ETL-03 | Phase 2 | Complete |
-| UX-02 | Phase 2 | Pending |
-| UX-03 | Phase 2 | Pending |
-| UX-04 | Phase 2 | Pending |
+| UX-02 | Phase 2 | Complete |
+| UX-03 | Phase 2 | Complete |
+| UX-04 | Phase 2 | Complete |
 | POLI-01 | Phase 3 | Pending |
 | POLI-02 | Phase 3 | Pending |
 | POLI-03 | Phase 3 | Pending |

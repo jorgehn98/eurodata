@@ -1,3 +1,16 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-02-27T12:50:04.716Z"
+progress:
+  total_phases: 2
+  completed_phases: 2
+  total_plans: 7
+  completed_plans: 7
+---
+
 # Project State
 
 ## Project Reference
@@ -11,10 +24,10 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 Phase: 2 of 7 (Economy Section)
 Plan: 3 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-27 — Plan 02-02 complete: Data contract layer — EconomyDataPoint type, EconomyMetric union, SPAIN_COUNTRY_ID constant, and useEconomyMetric TanStack Query v5 hook
+Status: Checkpoint — awaiting human verification at /es/economia
+Last activity: 2026-02-27 — Plan 02-03 Tasks 1+2 complete: recharts AreaChart components, EconomySection, /[locale]/economia route, ES/EN translations — checkpoint Task 3 requires browser verification
 
-Progress: [████░░░░░░] 22%
+Progress: [████░░░░░░] 27%
 
 ## Performance Metrics
 
@@ -28,13 +41,14 @@ Progress: [████░░░░░░] 22%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 4/4 | ~2.75h | ~40m |
-| 02-economy-section | 2/3 | ~100m | ~50m |
+| 02-economy-section | 3/3 | ~125m | ~42m |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed), 02-02 (types + hook)
-- Trend: On track — Phase 2 data contract layer complete, ready for chart UI
+- Last 5 plans: 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed), 02-02 (types + hook), 02-03 (chart UI + page route)
+- Trend: On track — Phase 2 automation complete; awaiting human verify at /es/economia
 
 *Updated after each plan completion*
+| Phase 02-economy-section P03 | 25 | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -65,6 +79,10 @@ Recent decisions affecting current work:
 - [02-02]: staleTime: 5 min in useEconomyMetric overrides global 1 min — economy data is stable within a session
 - [02-02]: NULL values preserved in mapped hook return (not filtered/coerced to 0) — chart components need null to render year gaps
 - [02-02]: createClient() called inside hook body (not module scope) — safe for SSR/concurrent requests
+- [Phase 02-economy-section]: recharts connectNulls=false preserves null gaps as visible line breaks — do not set true
+- [Phase 02-economy-section]: Data through [year] label derived from max(data.year) — satisfies ECON-06 without schema change
+- [Phase 02-economy-section]: EconomySection receives all labels as props from Server Component page.tsx — no useTranslations in client components
+- [Phase 02-economy-section]: CpiChart merges four EconomyDataPoint[] by year into flat Record objects for AreaChart data prop
 
 ### Pending Todos
 
@@ -79,5 +97,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 02-02-PLAN.md — Data contract layer complete; EconomyDataPoint type, useEconomyMetric hook, SPAIN_COUNTRY_ID constant; plan 02-03 (chart UI) unblocked
+Stopped at: Checkpoint Task 3 human-verify at /es/economia — 02-03 Tasks 1+2 committed (54c4754, 141f804); run `npm run dev` and verify the six checks in the checkpoint message
 Resume file: None
