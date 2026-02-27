@@ -11,13 +11,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFRA-01**: Project is deployed to Vercel with automatic CI/CD on push to main
 - [x] **INFRA-02**: Next.js 14 (App Router) with TypeScript configured with strict mode
-- [ ] **INFRA-03**: Supabase project connected (browser client + server client for SSR)
-- [ ] **INFRA-04**: Bilingual routing configured via next-intl (`/es/...` and `/en/...` routes with locale detection middleware)
-- [ ] **INFRA-05**: All UI strings use translation keys (`t('key')`) — zero hardcoded Spanish or English in components
-- [ ] **INFRA-06**: Database schema created via migration files: `countries`, `economic_indicators`, `political_data`, `crime_statistics`, `migration_data` tables
-- [ ] **INFRA-07**: `countries` lookup table seeded with EU-27 country codes, names (ES + EN), and flag emoji
+- [x] **INFRA-03**: Supabase project connected (browser client + server client for SSR)
+- [x] **INFRA-04**: Bilingual routing configured via next-intl (`/es/...` and `/en/...` routes with locale detection middleware)
+- [x] **INFRA-05**: All UI strings use translation keys (`t('key')`) — zero hardcoded Spanish or English in components
+- [x] **INFRA-06**: Database schema created via migration files: `countries`, `economic_indicators`, `political_data`, `crime_statistics`, `migration_data` tables
+- [x] **INFRA-07**: `countries` lookup table seeded with EU-27 country codes, names (ES + EN), and flag emoji
 - [x] **INFRA-08**: Tailwind CSS configured with custom design tokens for the dashboard palette
-- [ ] **INFRA-09**: TanStack Query provider configured at root layout
+- [x] **INFRA-09**: TanStack Query provider configured at root layout
 
 ### Economy Section
 
@@ -71,11 +71,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Data Quality & Trust
 
-- [ ] **DATA-01**: Every metric in the DB stores `source TEXT` (source name) and `source_url TEXT` (direct link to source)
-- [ ] **DATA-02**: Missing data is stored as NULL, never as 0 — charts show gaps not false zeros
-- [ ] **DATA-03**: All metric values normalized to canonical units during ingestion (EUR/year for salaries, rate per 100k for crime, etc.)
-- [ ] **DATA-04**: Historical data seed covers at minimum 10 years for each metric (2014–2024 or available range)
-- [ ] **DATA-05**: A `sync_log` table records when each data source was last successfully updated
+- [x] **DATA-01**: Every metric in the DB stores `source TEXT` (source name) and `source_url TEXT` (direct link to source)
+- [x] **DATA-02**: Missing data is stored as NULL, never as 0 — charts show gaps not false zeros
+- [x] **DATA-03**: All metric values normalized to canonical units during ingestion (EUR/year for salaries, rate per 100k for crime, etc.)
+- [x] **DATA-04**: Historical data seed covers at minimum 10 years for each metric (2014–2024 or available range)
+- [x] **DATA-05**: A `sync_log` table records when each data source was last successfully updated
 
 ### Data Ingestion (ETL)
 
@@ -91,8 +91,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **UX-02**: All charts show loading skeleton while data fetches — no blank flash
 - [ ] **UX-03**: All charts show "No data available for [Country] / [Year]" message when data is NULL
 - [ ] **UX-04**: All source links open in new tab (`target="_blank" rel="noopener noreferrer"`)
-- [ ] **UX-05**: Language switcher accessible from all pages — switches between `/es/...` and `/en/...`
-- [ ] **UX-06**: Dashboard has navigation between all 5 sections (Sidebar or top nav)
+- [x] **UX-05**: Language switcher accessible from all pages — switches between `/es/...` and `/en/...`
+- [x] **UX-06**: Dashboard has navigation between all 5 sections (Sidebar or top nav)
 - [ ] **UX-07**: Page-level OG tags and meta descriptions for journalist link sharing
 
 ## v2 Requirements
@@ -140,20 +140,20 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Complete |
-| INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
-| INFRA-06 | Phase 1 | Pending |
-| INFRA-07 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Complete |
+| INFRA-04 | Phase 1 | Complete |
+| INFRA-05 | Phase 1 | Complete |
+| INFRA-06 | Phase 1 | Complete |
+| INFRA-07 | Phase 1 | Complete |
 | INFRA-08 | Phase 1 | Complete |
-| INFRA-09 | Phase 1 | Pending |
-| DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
-| DATA-04 | Phase 1 | Pending |
-| DATA-05 | Phase 1 | Pending |
-| UX-05 | Phase 1 | Pending |
-| UX-06 | Phase 1 | Pending |
+| INFRA-09 | Phase 1 | Complete |
+| DATA-01 | Phase 1 | Complete |
+| DATA-02 | Phase 1 | Complete |
+| DATA-03 | Phase 1 | Complete |
+| DATA-04 | Phase 1 | Complete |
+| DATA-05 | Phase 1 | Complete |
+| UX-05 | Phase 1 | Complete |
+| UX-06 | Phase 1 | Complete |
 | ECON-01 | Phase 2 | Pending |
 | ECON-02 | Phase 2 | Pending |
 | ECON-03 | Phase 2 | Pending |
@@ -207,4 +207,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after roadmap creation — traceability expanded to individual requirement rows*
+*Last updated: 2026-02-27 after Phase 1 completion — all Phase 1 requirements marked complete*

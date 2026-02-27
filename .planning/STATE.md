@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Citizens can verify, with official sources linked, how their purchasing power and quality of life have evolved over time compared to the political class that governs them.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 2 — Economy Section
 
 ## Current Position
 
-Phase: 1 of 7 (Foundation)
-Plan: 3 of 4 in current phase
+Phase: 2 of 7 (Economy Section)
+Plan: 1 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-27 — Plan 01-03 complete: Supabase SSR dual-client setup, TanStack Query provider wired into locale layout
+Last activity: 2026-02-27 — Plan 01-04 complete: Phase 1 Foundation finished — 6-table Postgres schema pushed to Supabase, EU-27 countries seeded
 
-Progress: [███░░░░░░░] 10%
+Progress: [████░░░░░░] 14%
 
 ## Performance Metrics
 
@@ -27,11 +27,11 @@ Progress: [███░░░░░░░] 10%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 3/4 | ~2h | ~40m |
+| 01-foundation | 4/4 | ~2.75h | ~40m |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (scaffold + CI/CD), 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query)
-- Trend: On track
+- Last 5 plans: 01-01 (scaffold + CI/CD), 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed)
+- Trend: On track — Phase 1 complete
 
 *Updated after each plan completion*
 
@@ -54,6 +54,9 @@ Recent decisions affecting current work:
 - [01-03]: Env var name is NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY (not ANON_KEY) — matches Supabase dashboard "Publishable key" naming in newer projects
 - [01-03]: QueryClient created in useState(() => new QueryClient(...)) — never at module scope (prevents shared state between SSR requests)
 - [01-03]: QueryProvider placed inside NextIntlClientProvider in locale layout — all client components have both i18n and query context
+- [01-04]: Migration files use fixed timestamps (20260226000001, 20260226000002) matching documented names — not CLI-generated to avoid timestamp mismatch
+- [01-04]: sync_log.source_url is nullable (TEXT, no NOT NULL) — sync jobs may not always have a canonical URL; all other source columns are NOT NULL
+- [01-04]: supabase db query not available in Scoop-installed CLI version — migration list confirmation accepted as sufficient push verification
 
 ### Pending Todos
 
@@ -68,5 +71,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 01-03-PLAN.md — Supabase SSR dual-client setup, TanStack Query provider, QueryProvider wired into locale layout
+Stopped at: Completed 01-04-PLAN.md — Phase 1 Foundation complete; 6-table Postgres schema pushed to Supabase via migration files, EU-27 countries seeded
 Resume file: None
