@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T16:49:50.338Z"
+last_updated: "2026-02-27T23:03:22.111Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 10
+  completed_plans: 9
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 3 of 7 (Political Class Section) — IN PROGRESS
-Plan: 1 of 3 — COMPLETE
-Status: Phase 3 started — plan 03-01 (DB migration + CSV data + seed script) complete
-Last activity: 2026-02-27 — Plan 03-01 complete: political_pensions and revolving_door_cases tables created and seeded; all political salary metrics, advisor counts, pensions, revolving door cases seeded into Supabase
+Plan: 2 of 3 — COMPLETE
+Status: Phase 3 in progress — plan 03-02 (types + hooks + i18n) complete; 03-03 (UI components) is next
+Last activity: 2026-02-27 — Plan 03-02 complete: PoliticalDataPoint/PoliticalPension/RevolvingDoorCase types, three TanStack Query hooks, and Politics i18n namespace (es+en) created
 
-Progress: [████░░░░░░] 30%
+Progress: [█████░░░░░] 40%
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Progress: [████░░░░░░] 30%
 *Updated after each plan completion*
 | Phase 02-economy-section P03 | 70min | 3 tasks | 8 files |
 | Phase 03-political-class P01 | 5min | 2 tasks | 9 files |
+| Phase 03-political-class-section P02 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,8 @@ Recent decisions affecting current work:
 - [03-01]: political_pensions and revolving_door_cases UNIQUE constraints defined inline in CREATE TABLE DDL — not via separate ALTER TABLE; migration applied once cleanly
 - [03-01]: advisor_count uses year_start as the year column key — Rajoy II minority government (2016, no data) merged with Rajoy II main term to avoid duplicate year=2016 collision on (country_id,metric,year) unique constraint
 - [03-01]: salary CSVs use multi-metric format year,metric,value,unit,source,source_url — allows nominal and real variants in same file (same pattern as cpi-categories.csv from Phase 2)
+- [Phase 03-political-class-section]: usePoliticalPensions and useRevolvingDoorCases omit country_id filter — political_pensions and revolving_door_cases are Spain-specific tables with no country_id column in v1
+- [Phase 03-political-class-section]: Politics i18n namespace chart titles are neutral axis descriptions only (POLI-07 compliant) — 'Salario bruto anual (EUR)' describes Y-axis unit, not a conclusion
 
 ### Pending Todos
 
@@ -101,5 +104,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 03-01-PLAN.md — Phase 3 Plan 01 (DB migration + CSV seed) complete; 03-02 (types + hooks) is next
+Stopped at: Completed 03-02-PLAN.md — Phase 3 Plan 02 (types + hooks + i18n) complete; 03-03 (UI components) is next
 Resume file: None

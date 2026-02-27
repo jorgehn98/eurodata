@@ -32,14 +32,14 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Political Class Section
 
-- [ ] **POLI-01**: User can view annual salary of president, ministers, and MPs compared to national median salary on the same chart (Spain, historical)
-- [ ] **POLI-02**: User can view the ratio of politician salary to median citizen salary over time (Spain)
-- [ ] **POLI-03**: User can view number of political advisors and appointed positions per government term
-- [ ] **POLI-04**: User can view former presidents' and ministers' pensions with source attribution
-- [ ] **POLI-05**: User can view documented revolving door cases linked to official/media source (static list, manually curated)
-- [ ] **POLI-06**: All political figures' data has year granularity (no "current value only")
-- [ ] **POLI-07**: Chart titles are strictly neutral — describe the data axis, not the conclusion
-- [ ] **POLI-08**: Political section is available in Spanish and English
+- [x] **POLI-01**: User can view annual salary of president, ministers, and MPs compared to national median salary on the same chart (Spain, historical)
+- [x] **POLI-02**: User can view the ratio of politician salary to median citizen salary over time (Spain)
+- [x] **POLI-03**: User can view number of political advisors and appointed positions per government term
+- [x] **POLI-04**: User can view former presidents' and ministers' pensions with source attribution
+- [x] **POLI-05**: User can view documented revolving door cases linked to official/media source (static list, manually curated)
+- [x] **POLI-06**: All political figures' data has year granularity (no "current value only")
+- [x] **POLI-07**: Chart titles are strictly neutral — describe the data axis, not the conclusion
+- [x] **POLI-08**: Political section is available in Spanish and English
 
 ### Immigration Section
 
@@ -166,14 +166,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UX-02 | Phase 2 | Complete |
 | UX-03 | Phase 2 | Complete |
 | UX-04 | Phase 2 | Complete |
-| POLI-01 | Phase 3 | Pending |
-| POLI-02 | Phase 3 | Pending |
-| POLI-03 | Phase 3 | Pending |
-| POLI-04 | Phase 3 | Pending |
-| POLI-05 | Phase 3 | Pending |
-| POLI-06 | Phase 3 | Pending |
-| POLI-07 | Phase 3 | Pending |
-| POLI-08 | Phase 3 | Pending |
+| POLI-01 | Phase 3 | Complete |
+| POLI-02 | Phase 3 | Complete |
+| POLI-03 | Phase 3 | Complete |
+| POLI-04 | Phase 3 | Complete |
+| POLI-05 | Phase 3 | Complete |
+| POLI-06 | Phase 3 | Complete |
+| POLI-07 | Phase 3 | Complete |
+| POLI-08 | Phase 3 | Complete |
 | MIGR-01 | Phase 4 | Pending |
 | MIGR-02 | Phase 4 | Pending |
 | MIGR-03 | Phase 4 | Pending |

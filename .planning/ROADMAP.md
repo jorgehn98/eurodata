@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
 | 2. Economy Section | 3/3 | Complete   | 2026-02-27 |
-| 3. Political Class Section | 1/3 | In Progress | - |
+| 3. Political Class Section | 2/3 | In Progress|  |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
 | 6. Data Automation & ETL | 0/3 | Not started | - |
