@@ -69,12 +69,12 @@ Plans:
   4. User can view former presidents' and ministers' pensions with source attribution linking to the official BOE entry
   5. User can view the revolving door case list — each entry links to an official or press source and has an associated year
   6. Every chart title describes the data axis only — no title implies a conclusion or editorial judgment
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Political data seed — manual data entry from BOE historical records and Transparencia Internacional into `political_data` table; covers president, ministers, MPs since 2010
-- [ ] 03-02: Political API layer — queries and TanStack Query hooks for salary comparison, advisor counts, pensions, revolving door list
-- [ ] 03-03: Political UI — comparison chart (politicians vs median), ratio time series, advisor count table, pensions display, revolving door list; neutral title enforcement
+- [ ] 03-01-PLAN.md — DB migration (political_pensions + revolving_door_cases tables) + CSV data files + seed-politics.ts script; seeds all salary metrics, advisor counts, pensions, revolving door cases, and median_salary_nominal into Supabase
+- [ ] 03-02-PLAN.md — Types (PoliticalDataPoint, PoliticalPension, RevolvingDoorCase), POLITICAL_METRICS const, three TanStack Query hooks (usePoliticalMetric, usePoliticalPensions, useRevolvingDoorCases), Politics i18n namespace in es.json + en.json
+- [ ] 03-03-PLAN.md — All 5 political sub-components (SalaryComparisonChart, SalaryRatioChart, AdvisorCountChart, PensionsTable, RevolvingDoorList), PoliticsSection composer, /politics page route; human-verify checkpoint
 
 ### Phase 4: Immigration & Crime Sections
 **Goal**: Users can explore immigration flows and crime rates using only standardized international datasets, with methodology provenance visible on every metric
@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
 | 2. Economy Section | 3/3 | Complete   | 2026-02-27 |
-| 3. Political Class Section | 0/3 | Not started | - |
+| 3. Political Class Section | 0/3 | Planned | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
 | 6. Data Automation & ETL | 0/3 | Not started | - |
