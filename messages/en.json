@@ -16,5 +16,27 @@
     "title": "EuroData",
     "subtitle": "Official data. No editorials.",
     "description": "Tracking citizens' quality of life and purchasing power against the political class."
+  },
+  "Economy": {
+    "title": "Economy",
+    "intro": "Evolution of purchasing power and economic conditions in Spain, using official data from INE, OECD and Eurostat.",
+    "noData": "No data for this year",
+    "dataUnavailable": "Data not available",
+    "sourcePrefix": "Source",
+    "gapsNote": "Gaps in the chart indicate years with no available data.",
+    "dataThrough": "Data through",
+    "charts": {
+      "medianSalary": "Real median salary (2015-adjusted)",
+      "fiscalBurden": "Total fiscal burden (% of GDP)",
+      "housingRatio": "Housing price / median salary ratio (years)",
+      "cpiCategories": "CPI by category (base 2015 = 100)",
+      "povertyRisk": "Population at risk of poverty (%)"
+    },
+    "cpi": {
+      "food": "Food",
+      "energy": "Energy",
+      "transport": "Transport",
+      "housing": "Housing"
+    }
   }
 }

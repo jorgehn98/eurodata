@@ -16,5 +16,27 @@
     "title": "EuroData",
     "subtitle": "Datos oficiales. Sin editoriales.",
     "description": "Seguimiento de la calidad de vida y poder adquisitivo de los ciudadanos frente a la clase política."
+  },
+  "Economy": {
+    "title": "Economía",
+    "intro": "Evolución del poder adquisitivo y condiciones económicas en España, con datos oficiales de INE, OCDE y Eurostat.",
+    "noData": "Sin datos para este año",
+    "dataUnavailable": "Datos no disponibles",
+    "sourcePrefix": "Fuente",
+    "gapsNote": "Los espacios en el gráfico indican años sin datos disponibles.",
+    "dataThrough": "Datos hasta",
+    "charts": {
+      "medianSalary": "Salario mediano real (ajustado a 2015)",
+      "fiscalBurden": "Presión fiscal total (% del PIB)",
+      "housingRatio": "Precio vivienda / salario mediano (años)",
+      "cpiCategories": "IPC por categorías (base 2015 = 100)",
+      "povertyRisk": "Población en riesgo de pobreza (%)"
+    },
+    "cpi": {
+      "food": "Alimentación",
+      "energy": "Energía",
+      "transport": "Transporte",
+      "housing": "Vivienda"
+    }
   }
 }
