@@ -72,7 +72,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — DB migration (political_pensions + revolving_door_cases tables) + CSV data files + seed-politics.ts script; seeds all salary metrics, advisor counts, pensions, revolving door cases, and median_salary_nominal into Supabase
+- [x] 03-01-PLAN.md — DB migration (political_pensions + revolving_door_cases tables) + CSV data files + seed-politics.ts script; seeds all salary metrics, advisor counts, pensions, revolving door cases, and median_salary_nominal into Supabase
 - [ ] 03-02-PLAN.md — Types (PoliticalDataPoint, PoliticalPension, RevolvingDoorCase), POLITICAL_METRICS const, three TanStack Query hooks (usePoliticalMetric, usePoliticalPensions, useRevolvingDoorCases), Politics i18n namespace in es.json + en.json
 - [ ] 03-03-PLAN.md — All 5 political sub-components (SalaryComparisonChart, SalaryRatioChart, AdvisorCountChart, PensionsTable, RevolvingDoorList), PoliticsSection composer, /politics page route; human-verify checkpoint
 
@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
 | 2. Economy Section | 3/3 | Complete   | 2026-02-27 |
-| 3. Political Class Section | 0/3 | Planned | - |
+| 3. Political Class Section | 1/3 | In Progress | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
 | 6. Data Automation & ETL | 0/3 | Not started | - |

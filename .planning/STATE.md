@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 2 of 7 (Economy Section) — COMPLETE
-Plan: 3 of 3 — COMPLETE
-Status: Phase 2 complete — all three plans done and verified
-Last activity: 2026-02-27 — Plan 02-03 complete: human verification approved, route renamed economia → economy (5d35da1), all six browser checks passed at /es/economy and /en/economy
+Phase: 3 of 7 (Political Class Section) — IN PROGRESS
+Plan: 1 of 3 — COMPLETE
+Status: Phase 3 started — plan 03-01 (DB migration + CSV data + seed script) complete
+Last activity: 2026-02-27 — Plan 03-01 complete: political_pensions and revolving_door_cases tables created and seeded; all political salary metrics, advisor counts, pensions, revolving door cases seeded into Supabase
 
-Progress: [████░░░░░░] 27%
+Progress: [████░░░░░░] 30%
 
 ## Performance Metrics
 
@@ -49,6 +49,7 @@ Progress: [████░░░░░░] 27%
 
 *Updated after each plan completion*
 | Phase 02-economy-section P03 | 70min | 3 tasks | 8 files |
+| Phase 03-political-class P01 | 5min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,9 @@ Recent decisions affecting current work:
 - [Phase 02-economy-section]: EconomySection receives all labels as props from Server Component page.tsx — no useTranslations in client components
 - [Phase 02-economy-section]: CpiChart merges four EconomyDataPoint[] by year into flat Record objects for AreaChart data prop
 - [02-03]: Route folder named after English slug (economy), not Spanish (economia) — matches nav link hrefs defined in Phase 1
+- [03-01]: political_pensions and revolving_door_cases UNIQUE constraints defined inline in CREATE TABLE DDL — not via separate ALTER TABLE; migration applied once cleanly
+- [03-01]: advisor_count uses year_start as the year column key — Rajoy II minority government (2016, no data) merged with Rajoy II main term to avoid duplicate year=2016 collision on (country_id,metric,year) unique constraint
+- [03-01]: salary CSVs use multi-metric format year,metric,value,unit,source,source_url — allows nominal and real variants in same file (same pattern as cpi-categories.csv from Phase 2)
 
 ### Pending Todos
 
@@ -97,5 +101,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 02-03-PLAN.md — Phase 2 (Economy Section) fully complete; Phase 3 (Political Class) is next
+Stopped at: Completed 03-01-PLAN.md — Phase 3 Plan 01 (DB migration + CSV seed) complete; 03-02 (types + hooks) is next
 Resume file: None
