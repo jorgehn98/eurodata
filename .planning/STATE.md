@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 7 (Economy Section)
-Plan: 2 of 3 in current phase
+Plan: 3 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-27 — Plan 02-01 complete: Economy data seed — 120 rows of Spain historical economic indicators seeded into Supabase (8 metrics, 2010-2024)
+Last activity: 2026-02-27 — Plan 02-02 complete: Data contract layer — EconomyDataPoint type, EconomyMetric union, SPAIN_COUNTRY_ID constant, and useEconomyMetric TanStack Query v5 hook
 
-Progress: [████░░░░░░] 19%
+Progress: [████░░░░░░] 22%
 
 ## Performance Metrics
 
@@ -28,11 +28,11 @@ Progress: [████░░░░░░] 19%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 4/4 | ~2.75h | ~40m |
-| 02-economy-section | 1/3 | ~90m | ~90m |
+| 02-economy-section | 2/3 | ~100m | ~50m |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed)
-- Trend: On track — Phase 2 data foundation complete
+- Last 5 plans: 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed), 02-02 (types + hook)
+- Trend: On track — Phase 2 data contract layer complete, ready for chart UI
 
 *Updated after each plan completion*
 
@@ -61,6 +61,10 @@ Recent decisions affecting current work:
 - [02-01]: dotenv must be installed explicitly for tsx seed scripts — Next.js does not load .env.local for non-Next.js runtimes; dotenv.config({ path: '.env.local' }) required
 - [02-01]: SUPABASE_SERVICE_ROLE_KEY required for all seed/ETL scripts — anon key blocked by RLS on insert; service role key retrieved from Supabase Dashboard > Settings > API
 - [02-01]: Papa Parse dynamicTyping must be false in all seed scripts — explicit parseValue() function handles NULL mapping from empty CSV strings
+- [02-02]: EconomyMetric union type derived from ECONOMY_METRICS as const array — single source of truth; compile-time error for mistyped metric strings
+- [02-02]: staleTime: 5 min in useEconomyMetric overrides global 1 min — economy data is stable within a session
+- [02-02]: NULL values preserved in mapped hook return (not filtered/coerced to 0) — chart components need null to render year gaps
+- [02-02]: createClient() called inside hook body (not module scope) — safe for SSR/concurrent requests
 
 ### Pending Todos
 
@@ -75,5 +79,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 02-01-PLAN.md — Economy data seed complete; 120 rows in economic_indicators for Spain (8 metrics, 2010-2024); plans 02-02 and 02-03 unblocked
+Stopped at: Completed 02-02-PLAN.md — Data contract layer complete; EconomyDataPoint type, useEconomyMetric hook, SPAIN_COUNTRY_ID constant; plan 02-03 (chart UI) unblocked
 Resume file: None

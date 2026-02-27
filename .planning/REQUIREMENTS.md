@@ -21,12 +21,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Economy Section
 
-- [ ] **ECON-01**: User can view median real salary adjusted for inflation as a historical time series (Spain, 2010–present)
-- [ ] **ECON-02**: User can view effective total fiscal burden estimate (IRPF + VAT + social contributions) as a historical time series (Spain)
-- [ ] **ECON-03**: User can view housing price / median salary ratio by year as a historical time series (Spain)
-- [ ] **ECON-04**: User can view CPI broken down by category (food, energy, transport, housing) as a historical time series (Spain)
-- [ ] **ECON-05**: User can view percentage of population at risk of poverty as a historical time series (Spain)
-- [ ] **ECON-06**: Each economic metric displays source name, source URL, and last updated date
+- [x] **ECON-01**: User can view median real salary adjusted for inflation as a historical time series (Spain, 2010–present)
+- [x] **ECON-02**: User can view effective total fiscal burden estimate (IRPF + VAT + social contributions) as a historical time series (Spain)
+- [x] **ECON-03**: User can view housing price / median salary ratio by year as a historical time series (Spain)
+- [x] **ECON-04**: User can view CPI broken down by category (food, energy, transport, housing) as a historical time series (Spain)
+- [x] **ECON-05**: User can view percentage of population at risk of poverty as a historical time series (Spain)
+- [x] **ECON-06**: Each economic metric displays source name, source URL, and last updated date
 - [ ] **ECON-07**: User can hover on chart data points to see exact value, year, and source
 - [ ] **ECON-08**: Economy section is available in Spanish and English
 
@@ -154,12 +154,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-05 | Phase 1 | Complete |
 | UX-05 | Phase 1 | Complete |
 | UX-06 | Phase 1 | Complete |
-| ECON-01 | Phase 2 | Pending |
-| ECON-02 | Phase 2 | Pending |
-| ECON-03 | Phase 2 | Pending |
-| ECON-04 | Phase 2 | Pending |
-| ECON-05 | Phase 2 | Pending |
-| ECON-06 | Phase 2 | Pending |
+| ECON-01 | Phase 2 | Complete |
+| ECON-02 | Phase 2 | Complete |
+| ECON-03 | Phase 2 | Complete |
+| ECON-04 | Phase 2 | Complete |
+| ECON-05 | Phase 2 | Complete |
+| ECON-06 | Phase 2 | Complete |
 | ECON-07 | Phase 2 | Pending |
 | ECON-08 | Phase 2 | Pending |
 | ETL-03 | Phase 2 | Complete |
