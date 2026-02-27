@@ -10,28 +10,29 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 7 (Economy Section)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-27 — Plan 01-04 complete: Phase 1 Foundation finished — 6-table Postgres schema pushed to Supabase, EU-27 countries seeded
+Last activity: 2026-02-27 — Plan 02-01 complete: Economy data seed — 120 rows of Spain historical economic indicators seeded into Supabase (8 metrics, 2010-2024)
 
-Progress: [████░░░░░░] 14%
+Progress: [████░░░░░░] 19%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~30 min
-- Total execution time: ~2 hours (human-action checkpoints included)
+- Total plans completed: 4
+- Average duration: ~45 min (including checkpoint wait time)
+- Total execution time: ~3.5 hours (human-action checkpoints included)
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 4/4 | ~2.75h | ~40m |
+| 02-economy-section | 1/3 | ~90m | ~90m |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (scaffold + CI/CD), 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed)
-- Trend: On track — Phase 1 complete
+- Last 5 plans: 01-02 (next-intl i18n), 01-03 (Supabase + TanStack Query), 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed)
+- Trend: On track — Phase 2 data foundation complete
 
 *Updated after each plan completion*
 
@@ -57,6 +58,9 @@ Recent decisions affecting current work:
 - [01-04]: Migration files use fixed timestamps (20260226000001, 20260226000002) matching documented names — not CLI-generated to avoid timestamp mismatch
 - [01-04]: sync_log.source_url is nullable (TEXT, no NOT NULL) — sync jobs may not always have a canonical URL; all other source columns are NOT NULL
 - [01-04]: supabase db query not available in Scoop-installed CLI version — migration list confirmation accepted as sufficient push verification
+- [02-01]: dotenv must be installed explicitly for tsx seed scripts — Next.js does not load .env.local for non-Next.js runtimes; dotenv.config({ path: '.env.local' }) required
+- [02-01]: SUPABASE_SERVICE_ROLE_KEY required for all seed/ETL scripts — anon key blocked by RLS on insert; service role key retrieved from Supabase Dashboard > Settings > API
+- [02-01]: Papa Parse dynamicTyping must be false in all seed scripts — explicit parseValue() function handles NULL mapping from empty CSV strings
 
 ### Pending Todos
 
@@ -71,5 +75,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 01-04-PLAN.md — Phase 1 Foundation complete; 6-table Postgres schema pushed to Supabase via migration files, EU-27 countries seeded
+Stopped at: Completed 02-01-PLAN.md — Economy data seed complete; 120 rows in economic_indicators for Spain (8 metrics, 2010-2024); plans 02-02 and 02-03 unblocked
 Resume file: None

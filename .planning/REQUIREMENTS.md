@@ -81,7 +81,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **ETL-01**: Supabase Edge Function for Eurostat sync validates API response with zod schema — fails loudly on schema change rather than silently corrupting data
 - [ ] **ETL-02**: Supabase Edge Function for INE sync validates API response with zod schema
-- [ ] **ETL-03**: CSV import scripts (Papa Parse) for Banco de España, Transparencia Internacional, UNODC sources
+- [x] **ETL-03**: CSV import scripts (Papa Parse) for Banco de España, Transparencia Internacional, UNODC sources
 - [ ] **ETL-04**: pg_cron schedules for automated sync: Eurostat (daily at 6 AM UTC), INE (weekly)
 - [ ] **ETL-05**: Upsert uses `ON CONFLICT DO UPDATE` — re-running sync is idempotent
 
@@ -162,7 +162,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ECON-06 | Phase 2 | Pending |
 | ECON-07 | Phase 2 | Pending |
 | ECON-08 | Phase 2 | Pending |
-| ETL-03 | Phase 2 | Pending |
+| ETL-03 | Phase 2 | Complete |
 | UX-02 | Phase 2 | Pending |
 | UX-03 | Phase 2 | Pending |
 | UX-04 | Phase 2 | Pending |

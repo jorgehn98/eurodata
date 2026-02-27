@@ -54,7 +54,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Data seed: Papa Parse CSV import scripts + seed `economic_indicators` with 10+ year history for all 8 metric strings (median_salary_real, fiscal_burden_pct, housing_salary_ratio, cpi_food/energy/transport/housing_index, poverty_risk_pct)
+- [x] 02-01-PLAN.md — Data seed: Papa Parse CSV import scripts + seed `economic_indicators` with 10+ year history for all 8 metric strings (median_salary_real, fiscal_burden_pct, housing_salary_ratio, cpi_food/energy/transport/housing_index, poverty_risk_pct)
 - [ ] 02-02-PLAN.md — API layer: EconomyDataPoint type, EconomyMetric union, SPAIN_COUNTRY_ID constant, useEconomyMetric TanStack Query hook
 - [ ] 02-03-PLAN.md — Economy UI: EconomyChart and CpiChart (Recharts AreaChart), EconomyChartSkeleton, EconomySection client component, /economia page route, Spanish + English translations
 
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
-| 2. Economy Section | 0/3 | In progress | - |
+| 2. Economy Section | 1/3 | In progress | - |
 | 3. Political Class Section | 0/3 | Not started | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
