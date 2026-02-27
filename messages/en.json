@@ -38,5 +38,57 @@
       "transport": "Transport",
       "housing": "Housing"
     }
+  },
+  "Politics": {
+    "title": "Political Class",
+    "intro": "Official salaries, advisors, pensions and revolving door cases for public office holders in Spain, sourced from BOE and the Transparency Portal.",
+    "noData": "No data for this year",
+    "dataUnavailable": "Data unavailable",
+    "sourcePrefix": "Source",
+    "gapsNote": "Gaps in the chart indicate years with no available data.",
+    "dataThrough": "Data through",
+    "anchors": {
+      "salaryComparison": "Salaries",
+      "salaryRatio": "Ratios",
+      "advisors": "Advisors",
+      "pensions": "Pensions",
+      "revolvingDoor": "Revolving door"
+    },
+    "toggle": {
+      "real": "Real (inflation-adjusted)",
+      "nominal": "Nominal (current EUR)"
+    },
+    "charts": {
+      "salaryComparison": "Annual gross salary (EUR)",
+      "salaryRatio": "Politician salary / median salary ratio",
+      "advisorCount": "Free-appointment positions by legislature"
+    },
+    "series": {
+      "president": "President",
+      "ministers": "Ministers (average)",
+      "mps": "MPs (average)",
+      "median": "Citizen median salary"
+    },
+    "pensions": {
+      "sectionTitle": "Lifetime pensions (EUR/year)",
+      "columns": {
+        "name": "Name",
+        "role": "Role",
+        "pension": "Annual pension (EUR)",
+        "yearsInOffice": "Years in office",
+        "source": "Source"
+      },
+      "sourceLabel": "BOE"
+    },
+    "revolvingDoor": {
+      "sectionTitle": "Documented revolving door cases",
+      "fields": {
+        "role": "Political role",
+        "movedTo": "Moved to",
+        "year": "Year",
+        "source": "Source"
+      },
+      "sourceLabel": "View source"
+    }
   }
 }

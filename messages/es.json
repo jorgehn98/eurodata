@@ -38,5 +38,57 @@
       "transport": "Transporte",
       "housing": "Vivienda"
     }
+  },
+  "Politics": {
+    "title": "Clase Política",
+    "intro": "Retribuciones, asesores, pensiones y puertas giratorias de los cargos públicos en España, con datos oficiales del BOE y Portal de Transparencia.",
+    "noData": "Sin datos para este año",
+    "dataUnavailable": "Datos no disponibles",
+    "sourcePrefix": "Fuente",
+    "gapsNote": "Los espacios en el gráfico indican años sin datos disponibles.",
+    "dataThrough": "Datos hasta",
+    "anchors": {
+      "salaryComparison": "Salarios",
+      "salaryRatio": "Ratios",
+      "advisors": "Asesores",
+      "pensions": "Pensiones",
+      "revolvingDoor": "Puerta giratoria"
+    },
+    "toggle": {
+      "real": "Real (ajustado inflación)",
+      "nominal": "Nominal (EUR corrientes)"
+    },
+    "charts": {
+      "salaryComparison": "Salario bruto anual (EUR)",
+      "salaryRatio": "Ratio salario político / salario mediano",
+      "advisorCount": "Cargos de libre designación por legislatura"
+    },
+    "series": {
+      "president": "Presidente del Gobierno",
+      "ministers": "Ministros (promedio)",
+      "mps": "Diputados (promedio)",
+      "median": "Salario mediano ciudadano"
+    },
+    "pensions": {
+      "sectionTitle": "Pensiones vitalicias (EUR/año)",
+      "columns": {
+        "name": "Nombre",
+        "role": "Cargo",
+        "pension": "Pensión anual (EUR)",
+        "yearsInOffice": "Años en el cargo",
+        "source": "Fuente"
+      },
+      "sourceLabel": "BOE"
+    },
+    "revolvingDoor": {
+      "sectionTitle": "Casos documentados de puerta giratoria",
+      "fields": {
+        "role": "Cargo político",
+        "movedTo": "Destino",
+        "year": "Año",
+        "source": "Fuente"
+      },
+      "sourceLabel": "Ver fuente"
+    }
   }
 }
