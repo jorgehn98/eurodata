@@ -51,12 +51,12 @@ Plans:
   4. When data is missing for a year, the chart shows a visible gap — not a zero — with a "No data available" label
   5. Charts show a loading skeleton while data fetches — no blank flash or layout shift on page load
   6. The entire economy section renders correctly in both Spanish and English
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Economy data seed — CSV import scripts (Papa Parse) for Banco de España and INE sources; seed `economic_indicators` table with 10+ year history for all five metrics
-- [ ] 02-02: Economy API layer — Supabase queries + TanStack Query hooks for all five economy metrics; ISR configuration
-- [ ] 02-03: Economy UI — Economy page with five chart components (Recharts), source attribution display, tooltip implementation, null-gap handling, loading skeletons
+- [ ] 02-01-PLAN.md — Data seed: Papa Parse CSV import scripts + seed `economic_indicators` with 10+ year history for all 8 metric strings (median_salary_real, fiscal_burden_pct, housing_salary_ratio, cpi_food/energy/transport/housing_index, poverty_risk_pct)
+- [ ] 02-02-PLAN.md — API layer: EconomyDataPoint type, EconomyMetric union, SPAIN_COUNTRY_ID constant, useEconomyMetric TanStack Query hook
+- [ ] 02-03-PLAN.md — Economy UI: EconomyChart and CpiChart (Recharts AreaChart), EconomyChartSkeleton, EconomySection client component, /economia page route, Spanish + English translations
 
 ### Phase 3: Political Class Section
 **Goal**: Users can see the factual, year-by-year comparison between political compensation and citizen purchasing power in Spain — the core differentiating feature of EuroData
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
-| 2. Economy Section | 0/3 | Not started | - |
+| 2. Economy Section | 0/3 | In progress | - |
 | 3. Political Class Section | 0/3 | Not started | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
