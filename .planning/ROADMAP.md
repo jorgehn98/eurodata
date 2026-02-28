@@ -15,6 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Next.js + Supabase + next-intl + DB schema — everything downstream depends on this
 - [x] **Phase 2: Economy Section** - Spain economy and purchasing power dashboard with interactive charts and source attribution (completed 2026-02-27)
 - [x] **Phase 3: Political Class Section** - Politicians vs citizens comparison — the project's core differentiating angle (completed 2026-02-28)
+- [ ] **Phase 3.1: Political Section Polish** (INSERTED) - Close tech debt from Phase 3 audit: nominal/real toggle parity + empty-state UX
 - [ ] **Phase 4: Immigration & Crime Sections** - Standardized flow and crime rate data using Eurostat/UNODC/Frontex only
 - [ ] **Phase 5: Country Comparator** - Multi-country selector, side-by-side comparison, and EU rankings across all metrics
 - [ ] **Phase 6: Data Automation & ETL** - Edge Functions + pg_cron replace manual seeds with automated, validated syncs
@@ -76,9 +77,22 @@ Plans:
 - [ ] 03-02-PLAN.md — Types (PoliticalDataPoint, PoliticalPension, RevolvingDoorCase), POLITICAL_METRICS const, three TanStack Query hooks (usePoliticalMetric, usePoliticalPensions, useRevolvingDoorCases), Politics i18n namespace in es.json + en.json
 - [ ] 03-03-PLAN.md — All 5 political sub-components (SalaryComparisonChart, SalaryRatioChart, AdvisorCountChart, PensionsTable, RevolvingDoorList), PoliticsSection composer, /politics page route; human-verify checkpoint
 
+### Phase 3.1: Political Section Polish
+**Goal**: The political section matches the economy section's quality — nominal/real median salary toggle works correctly for the median line, and empty political data tables show a "Datos no disponibles" message instead of rendering silently empty
+**Depends on**: Phase 3
+**Gap Closure**: Closes tech debt from v1.0 milestone audit
+**Requirements**: UX-03 (quality parity with economy section)
+**Success Criteria** (what must be TRUE):
+  1. Toggling between Nominal and Real on the salary comparison chart changes both the politician lines AND the median line
+  2. When political data is missing, PensionsTable, RevolvingDoorList, and AdvisorCountChart each show the "Datos no disponibles" / "No data available" message matching the economy section pattern
+**Plans**: TBD
+
+Plans:
+- [ ] 03.1-01: SalaryComparisonChart nominal median fix + politics empty-state UX parity
+
 ### Phase 4: Immigration & Crime Sections
 **Goal**: Users can explore immigration flows and crime rates using only standardized international datasets, with methodology provenance visible on every metric
-**Depends on**: Phase 3
+**Depends on**: Phase 3.1
 **Requirements**: MIGR-01, MIGR-02, MIGR-03, MIGR-04, MIGR-05, MIGR-06, MIGR-07, CRIM-01, CRIM-02, CRIM-03, CRIM-04, CRIM-05, CRIM-06
 **Success Criteria** (what must be TRUE):
   1. User can view legal migration flows (first residence permits) and irregular arrivals as separate time series for Spain, sourced exclusively from Eurostat and Frontex respectively
@@ -151,6 +165,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
 | 2. Economy Section | 3/3 | Complete   | 2026-02-27 |
 | 3. Political Class Section | 3/3 | Complete   | 2026-02-28 |
+| 3.1. Political Section Polish | 0/1 | Not started | - |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
 | 6. Data Automation & ETL | 0/3 | Not started | - |
