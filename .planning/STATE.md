@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-02-27T23:03:22.111Z"
+status: in_progress
+last_updated: "2026-02-28T00:00:00.000Z"
 progress:
-  total_phases: 3
-  completed_phases: 2
+  total_phases: 7
+  completed_phases: 3
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Citizens can verify, with official sources linked, how their purchasing power and quality of life have evolved over time compared to the political class that governs them.
-**Current focus:** Phase 3 — Political Class Section (next up)
+**Current focus:** Phase 4 — Immigration Section (next up)
 
 ## Current Position
 
-Phase: 3 of 7 (Political Class Section) — IN PROGRESS
-Plan: 2 of 3 — COMPLETE
-Status: Phase 3 in progress — plan 03-02 (types + hooks + i18n) complete; 03-03 (UI components) is next
-Last activity: 2026-02-27 — Plan 03-02 complete: PoliticalDataPoint/PoliticalPension/RevolvingDoorCase types, three TanStack Query hooks, and Politics i18n namespace (es+en) created
+Phase: 3 of 7 (Political Class Section) — COMPLETE
+Plan: 3 of 3 — COMPLETE
+Status: Phase 3 complete — all three plans done (03-01 DB foundation, 03-02 types/hooks/i18n, 03-03 UI components); Phase 4 (Immigration Section) is next
+Last activity: 2026-02-28 — Plan 03-03 complete: all 5 political sub-components, PoliticsSection, /politics page route built and human-verified in browser
 
-Progress: [█████░░░░░] 40%
+Progress: [███████░░░] 57%
 
 ## Performance Metrics
 
@@ -44,13 +44,14 @@ Progress: [█████░░░░░] 40%
 | 02-economy-section | 3/3 | ~125m | ~42m |
 
 **Recent Trend:**
-- Last 5 plans: 01-04 (DB schema + EU-27 seed), 02-01 (economy CSV seed), 02-02 (types + hook), 02-03 (chart UI + page route)
-- Trend: On track — Phase 2 fully complete; Phase 3 ready to begin
+- Last 5 plans: 02-03 (chart UI + page route), 03-01 (political DB seed), 03-02 (types + hooks + i18n), 03-03 (political UI components + page route)
+- Trend: On track — Phase 3 fully complete; Phase 4 (Immigration Section) ready to begin
 
 *Updated after each plan completion*
 | Phase 02-economy-section P03 | 70min | 3 tasks | 8 files |
 | Phase 03-political-class P01 | 5min | 2 tasks | 9 files |
-| Phase 03-political-class-section P02 | 2 | 2 tasks | 6 files |
+| Phase 03-political-class-section P02 | 2min | 2 tasks | 6 files |
+| Phase 03-political-class-section P03 | 60min | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,11 @@ Recent decisions affecting current work:
 - [03-01]: salary CSVs use multi-metric format year,metric,value,unit,source,source_url — allows nominal and real variants in same file (same pattern as cpi-categories.csv from Phase 2)
 - [Phase 03-political-class-section]: usePoliticalPensions and useRevolvingDoorCases omit country_id filter — political_pensions and revolving_door_cases are Spain-specific tables with no country_id column in v1
 - [Phase 03-political-class-section]: Politics i18n namespace chart titles are neutral axis descriptions only (POLI-07 compliant) — 'Salario bruto anual (EUR)' describes Y-axis unit, not a conclusion
+- [03-03]: SalaryComparisonChart uses useEconomyMetric for median salary line — median lives in economic_indicators, not political_data
+- [03-03]: median_salary_nominal not seeded in v1 — nominal median toggle falls back to real; politician lines switch correctly; ratio charts unaffected (always use real/real)
+- [03-03]: Route slug 'politics' (English) not 'politica' — matches Phase 1 nav link hrefs
+- [03-03]: Bar fill set directly on <Bar fill="..."> — no <Cell> wrapper (deprecated in recharts v3.7)
+- [03-03]: BarChart XAxis type prop omitted (defaults to category) — prevents NaN rendering for string term labels
 
 ### Pending Todos
 
@@ -103,6 +109,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-27
-Stopped at: Completed 03-02-PLAN.md — Phase 3 Plan 02 (types + hooks + i18n) complete; 03-03 (UI components) is next
+Last session: 2026-02-28
+Stopped at: Completed 03-03-PLAN.md — Phase 3 complete; Phase 4 (Immigration Section) is next
 Resume file: None

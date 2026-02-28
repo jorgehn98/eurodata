@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Next.js + Supabase + next-intl + DB schema — everything downstream depends on this
 - [x] **Phase 2: Economy Section** - Spain economy and purchasing power dashboard with interactive charts and source attribution (completed 2026-02-27)
-- [ ] **Phase 3: Political Class Section** - Politicians vs citizens comparison — the project's core differentiating angle
+- [x] **Phase 3: Political Class Section** - Politicians vs citizens comparison — the project's core differentiating angle (completed 2026-02-28)
 - [ ] **Phase 4: Immigration & Crime Sections** - Standardized flow and crime rate data using Eurostat/UNODC/Frontex only
 - [ ] **Phase 5: Country Comparator** - Multi-country selector, side-by-side comparison, and EU rankings across all metrics
 - [ ] **Phase 6: Data Automation & ETL** - Edge Functions + pg_cron replace manual seeds with automated, validated syncs
@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-27 |
 | 2. Economy Section | 3/3 | Complete   | 2026-02-27 |
-| 3. Political Class Section | 2/3 | In Progress|  |
+| 3. Political Class Section | 3/3 | Complete   | 2026-02-28 |
 | 4. Immigration & Crime Sections | 0/4 | Not started | - |
 | 5. Country Comparator | 0/2 | Not started | - |
 | 6. Data Automation & ETL | 0/3 | Not started | - |
